@@ -180,5 +180,3 @@ npm test
 ## Notes
 
 This implementation follows a layered structure with controllers, services, and utilities to keep the code organized and readable.
-
-The focus was on meeting the assignment requirements with proper validation, error handling, and test coverage.
