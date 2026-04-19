@@ -6,7 +6,7 @@ describe("DELETE /api/expenses/:id", () => {
 
   it("should delete an existing expense", async () => {
 
-    // ✅ Create with unique data
+    //  Create with unique data
     const createRes = await request(app)
       .post("/api/expenses")
       .send({
@@ -17,7 +17,7 @@ describe("DELETE /api/expenses/:id", () => {
 
     const id = createRes.body._id;
 
-    // ✅ Delete
+    //  Delete
     const res = await request(app).delete(`/api/expenses/${id}`);
 
     expect(res.statusCode).toBe(200);
