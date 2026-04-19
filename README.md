@@ -6,6 +6,9 @@ This project is a backend service built for managing daily expenses.
 It provides a set of REST APIs to perform basic operations like creating, updating, deleting, and retrieving expenses.
 
 The implementation focuses on handling real-world scenarios such as input validation, duplicate entries, and daily limits, as specified in the assignment.
+
+---
+
 ## Tech Stack
 
 * Node.js
@@ -13,7 +16,11 @@ The implementation focuses on handling real-world scenarios such as input valida
 * MongoDB with Mongoose
 * Jest & Supertest (for testing)
 
+---
+
 ## Project Structure
+
+```
 expense tracker
 ├─ app.js
 ├─ controllers
@@ -34,30 +41,37 @@ expense tracker
 │  └─ expenseFeatures.test.js
 ├─ server.js
 └─ README.md
+```
+
+---
+
 ## Setup Instructions
 
 1. Clone the repository
 
-
+```
 git clone <your-repo-link>
-
+```
 
 2. Install dependencies
 
-
+```
 npm install
-
+```
 
 3. Start the server
 
-
+```
 npm start
-
+```
 
 4. Run tests
 
-
+```
 npm test
+```
+
+---
 
 ## API Endpoints
 
@@ -67,11 +81,15 @@ POST `/api/expenses`
 
 Example request:
 
+```
 {
   "title": "Lunch",
   "amount": 100,
   "category": "Food"
 }
+```
+
+---
 
 ### Get All Expenses
 
@@ -83,21 +101,31 @@ Supports:
 * date range (startDate, endDate)
 * pagination (page, limit)
 
+---
+
 ### Get Expense by ID
 
 GET `/api/expenses/:id`
+
+---
 
 ### Update Expense
 
 PUT `/api/expenses/:id`
 
+---
+
 ### Delete Expense
 
 DELETE `/api/expenses/:id`
 
+---
+
 ### Get Total Expenses
 
 GET `/api/expenses/total`
+
+---
 
 ## Business Rules Implemented
 
@@ -107,15 +135,18 @@ GET `/api/expenses/total`
 * Maximum 10 expenses can be added per day
 * Duplicate expenses (same title, amount, and date) are not allowed
 
+---
+
 ## Error Handling
 
 The APIs return structured error responses. Example:
 
+```
 {
   "error": "Bad Request",
   "message": "Invalid category"
 }
-
+```
 
 Appropriate HTTP status codes are used:
 
@@ -124,6 +155,8 @@ Appropriate HTTP status codes are used:
 * 400 → Bad Request
 * 404 → Not Found
 * 500 → Server Error
+
+---
 
 ## Testing
 
@@ -138,10 +171,11 @@ They cover:
 
 Run tests using:
 
+```
 npm test
+```
 
-
-
+---
 
 ## Notes
 
